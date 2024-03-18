@@ -83,12 +83,15 @@ submit.addEventListener('click', (e) => {
     if (validEmail && validNumber && validUser) {
         console.log('Phone user and email are valid. Form submitting');
         let success = document.getElementById('success');
+        let fail = document.getElementById('fail');
+
         success.classList.add('show');
-         let ele = document.getElementById("formid");
+        //  let ele = document.getElementById("formid");
          ele.reset();
         success.style.display = "block";
         fail.classList.remove('show');
-
+        $('#fail').hide();
+        $('#success').show();
 
     }
     else {
@@ -97,6 +100,9 @@ submit.addEventListener('click', (e) => {
         fail.classList.add('show');
         fail.style.display = "block";
         success.classList.remove('show');
+        $('#success').hide();
+        $('#fail').show();
+
 
     }
 
